@@ -1,0 +1,9 @@
+<div>
+  <h1>Introduce un nombre</h1>
+  <input type="text" placeholder="Nombre" (keydown.enter)="data.set(+$event.target.value)">
+  <button class="block px-2" (click)="tipo()">Tipo de data de : {{data()}}</button>
+</div>
+<!-- <router-outlet > -->
+  <app-son  [getData]="data()"  (putData)="recibido.set($event)" ></app-son>
+<!-- </router-outlet> -->
+<span>{{recibido()}} </span>
