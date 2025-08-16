@@ -1,19 +1,15 @@
 import { Component, computed, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import Son from '../son/son';
 
 @Component({
   selector: 'app-dad',
-  imports: [RouterOutlet, Son],
+  imports: [Son],
   templateUrl: './dad.html',
+  styleUrl:'./dad.css'
 
 })
 export default class Dad {
-  data = signal<number>(0)
-  recibido = signal<number|null>(null)
-  tipo(){
-    console.log(typeof this.data())
-  }
 
-
+  inputData = signal<number|null>(null)
+  dataGeted = signal<string>('')
 }

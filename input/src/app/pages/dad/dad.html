@@ -1,9 +1,17 @@
-<div>
-  <h1>Introduce un nombre</h1>
-  <input type="text" placeholder="Nombre" (keydown.enter)="data.set(+$event.target.value)">
-  <button class="block px-2" (click)="tipo()">Tipo de data de : {{data()}}</button>
+<div class="div_padre">`
+  <h1 class="h1_dad">
+    este es el padre
+  </h1>
+  <div>
+
+    <label>
+      Numero de movil :
+    </label>
+    <input type="number" placeholder="introduce un texto" (keydown.enter)="inputData.set(+$event.target.value)" >
+  </div>
+  <div>
+    <span>Recibo: {{dataGeted()}}</span>
+  </div>
+  <app-son [data]="inputData()" (backData)="dataGeted.set($event)" ></app-son>
+
 </div>
-<!-- <router-outlet > -->
-  <app-son  [getData]="data()"  (putData)="recibido.set($event)" ></app-son>
-<!-- </router-outlet> -->
-<span>{{recibido()}} </span>
