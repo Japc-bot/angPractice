@@ -10,7 +10,9 @@
     <input type="number" placeholder="introduce un texto" (keydown.enter)="inputData.set(+$event.target.value)" >
   </div>
   <div>
-    <span>Recibo: {{dataGeted()}}</span>
+    @for (item of dataGeted(); track $index) {
+      <span>Recibo: {{item.saludo}}  y  {{item.despedida}}</span>
+    }
   </div>
   <app-son [data]="inputData()" (backData)="dataGeted.set($event)" ></app-son>
 

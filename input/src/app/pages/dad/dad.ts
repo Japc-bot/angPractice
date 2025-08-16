@@ -1,5 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
-import Son from '../son/son';
+import Son, { Prueba } from '../son/son';
 
 @Component({
   selector: 'app-dad',
@@ -11,5 +11,5 @@ import Son from '../son/son';
 export default class Dad {
 
   inputData = signal<number|null>(null)
-  dataGeted = signal<string>('')
+  dataGeted = signal<Prueba[]>([])
 }
