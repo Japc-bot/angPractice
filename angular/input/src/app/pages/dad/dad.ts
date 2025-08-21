@@ -1,6 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import Son from '../son/son';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-dad',
