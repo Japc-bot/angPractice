@@ -1,17 +1,25 @@
 import { Component, computed, input, output, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+export interface Prueba {
+  saludo?: string;
+  despedida?: string;
+}
 
 @Component({
   selector: 'app-son',
-  imports: [RouterOutlet],
   templateUrl: './son.html',
+  styleUrl:'./son.css'
 
 })
 export default class Son {
-  getData = input<number>(0)
-  backData = computed(()=> this.getData() * 2);
-  putData = output<number>()
-  showData(){
-    this.putData.emit(this.backData())
+  data = input<number|null>()
+  dataInput= signal<Prueba[]>([
+    {saludo :'como estas'},
+    {despedida :'adios'}
+  ])
+  backData= output<Prueba[]>()
+  sendDatada(){
+    this.backData.emit(this.dataInput())
   }
+
 }

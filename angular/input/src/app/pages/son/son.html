@@ -1,5 +1,11 @@
-<p>son works!</p>
-<span>Data recibida : {{getData()}}</span>
-<br>
-<br>
-<button (click)="showData()"  >Enviar datos</button>
+<div class="div_hijo">
+  <h1>este es el hijo</h1>
+  <div>
+    <span>esto recibe : {{data()}}</span>
+  </div>
+  <div>
+    <label for="">Enviar</label>
+    <!-- <input type="text" placeholder="datos a enviar" (keydown.enter)="dataInput.set($event.target.value)"> -->
+    <button (click)="sendDatada()">Enviar data</button>
+  </div>
+</div>
