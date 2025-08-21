@@ -20,7 +20,7 @@ variable_1 = True
 print(variable_1)
 variable_1 = 'string'
 print(variable_1)
-
+#mutabilidadcd .
 variable_1[0]='F'
 print(variable_1)
 
